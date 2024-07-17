@@ -1,0 +1,300 @@
+body{
+    font-family: "Montserrat", sans-serif;
+    margin:0;
+    background-color: black;
+    color: white;
+    overflow: hidden;/*When content overflow we can't see them content default overflow value is scroll*/
+}
+.main{
+    display: flex;
+    height:100vh;
+    padding: 0.5rem;
+}
+.sidebar{
+    background-color: black;
+    width:340px;
+    border-radius:1rem ; /*1 rem = 16px*/
+    margin:0.5rem
+}
+.maincontent{
+    background-color: #121212;
+    flex: 1; /*Means remaing width (flex-direction = row)space occupy by maincontent*/
+    border-radius:1rem ; /*1 rem = 16px*/
+    overflow: auto; /*It make scrollabel*/
+    padding: 0rem 1.5rem;
+}
+.musicplayer{
+    background-color: black;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: 72px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.nav{
+    background-color: #121212;
+    border-radius:1rem ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100px;
+    padding: 0.5rem 0.75rem;
+}
+.navoption{
+    line-height: 2.5rem;
+    opacity: 0.75;
+    padding: 0.5rem 0.75rem;
+}
+.navoption:hover{
+    line-height: 2.5rem;
+    opacity: 1;
+}
+.navoption i{
+    font-size: 1.25rem;
+}
+.navoption a{
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+.library{
+    background-color: #121212;
+    border-radius:1rem ; 
+    height: 100%;
+    margin: 0.5rem;
+    padding: 0.5rem 0.75rem;
+}
+.options{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.libopt img{
+    height: 1.25rem;
+    width: 1.25rem;
+}
+.icons{
+    font-size: 1.25rem;
+    display: flex;
+}
+.icons i{
+    opacity: 0.75;
+    margin-right: 1rem;
+}
+.icons i:hover{
+    opacity: 1;
+}
+.box{
+    background-color: #232323;
+    height: 8rem;
+    border-radius: 0.75rem;
+    margin: 0.75rem 0rem .75rem 0rem;
+    padding: 0.75rem 1rem;
+}
+.box-p1{
+    height: 1rem;
+    font-weight: 500;
+}
+.box-p2{
+    height: 0.85rem;
+    opacity: 0.75;
+}
+.badge{
+    background-color: white;
+    border: none;
+    border-radius: 100px;
+    padding: 0.25rem 1rem;
+    font-weight: 700;
+    margin-top: 1rem;
+    height: 2rem;
+}
+.darkbadge{
+    background-color: black;
+    color: white;
+}
+.stickynav{
+    position: sticky;
+    top: 0;
+    background-color: #121212;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0rem;
+    z-index: 10; /*basically it use for not overlap sticky nav and cards*/
+}
+.stickynavicons{
+    margin-left: 0.75rem;
+}
+.stickynavbuttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-item{
+    margin-right: 1rem;
+}
+@media(max-width: 1000px){
+    .hide{
+        display: none;
+    }
+}
+.card{
+    background-color: #232323;
+    width:150px;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 1.5rem;
+}
+.cards-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.cardimg{
+    width:100%;
+    border-radius: 0.5rem;
+}
+.card-title{
+    font-weight: 600;
+}
+.card-info{
+    font-size: 0.85rem;
+    opacity: 0.75rem;
+}
+.footer{
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.line{
+    width: 90%;
+    height: 30%;
+    border-top: 1px solid;
+    opacity: 0.4;
+}
+.musicplayer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.album{
+    width: 25%;
+    display: flex;
+}
+.player{
+    width: 50%;
+}
+.controls{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.palyercontrolicon{
+    height: 1rem;
+    margin-right: 1.75rem;
+    opacity: 0.75;
+}
+.palyercontrolicon:hover{
+    opacity: 1;
+}
+.playercontrols{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.playbackbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.progressbar{
+    width: 70%;
+    appearance: none;/*It remove default syle*/
+    background-color: transparent;
+    cursor: pointer;
+}
+.progressbar::-webkit-slider-runnable-track{
+    background-color: #ddd;
+    border-radius: 100px;
+    height: 0.25rem;
+}
+.progressbar::-webkit-slider-thumb{
+    appearance: none;
+    height: 1rem;
+    width: 1rem;
+    background-color: white;
+    border-radius: 50%;
+    margin-top: -6px;
+}
+.progressbar::-webkit-slider-runnable-track:active{
+    background-color: #1bd760;
+}
+.controlicons i{
+    margin-right: 1rem;
+    opacity: 0.75;
+}
+.controlicons span{
+    margin-right: 1rem;
+    opacity: 0.75;
+}
+.controlvolume i{
+    opacity: 0.75; 
+}
+.controlicons i:hover{
+    opacity: 1;
+}
+.controlicons span:hover{
+    opacity: 1;
+}
+.controlvolume i:hover{
+    opacity: 1;
+}
+.cvol{
+    appearance: none;
+    
+}
+.cvol::-webkit-slider-runnable-track{
+    background-color: #ddd;
+    border-radius: 100px;
+    height: 0.27rem;
+}
+.cvol::-webkit-slider-thumb{
+    appearance: none;
+    height: 1rem;
+    width: 1rem;
+    background-color: white;
+    border-radius: 50%;
+    margin-top: -6px;
+}
+.cvol::-webkit-slider-runnable-track:active{
+    background-color: #1bd760;
+}
+.album{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.albumphoto img{
+    height: 62px;
+    width: 62px;
+    margin:0.25rem 1rem 0rem 0rem;
+}
+.musicinfo{
+    margin-right: 1.75rem;
+}
+.mtit{
+    font-weight: 600;
+}
+.msing{
+    font-size: 0.75rem;
+    margin-top: 0.35rem;
+}
+.albumicon span{
+    margin-right: 0.75rem;
+    opacity: 0.75;
+}
+.albumicon span:hover{
+    opacity: 1;
+}
